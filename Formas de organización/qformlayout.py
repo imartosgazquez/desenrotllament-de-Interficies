@@ -17,10 +17,10 @@ class MainWindow(QMainWindow):
         formulario = QFormLayout()
 
         # añadimos widgets con etiquetas en filas
-        formulario.addRow("Campo 1", Caja("orange"))
+        formulario.addRow("Naranja", Caja("orange"))
         formulario.addRow("Campo 2", Caja("purple"))
-        formulario.addRow("Campo 3", Caja("magenta"))
-        formulario.addRow("Campo 4", Caja("gray"))
+        formulario.addRow("Magenta", Caja("magenta"))
+        formulario.addRow("Gris", Caja("gray"))
         formulario.addRow("Campo 5", Caja("red"))
 
         # configuraciones extra
