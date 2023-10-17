@@ -1,18 +1,19 @@
-class Madre:
+from PySide6.QtWidgets import *
+from PySide6.QtCore import QSize # Nuevo
+import sys
+class MainWindow(QMainWindow):
     def __init__(self):
-        print(f"Soy Madre")
-
-
-class Padre:
-    def __init__(self):
-        print(f"Soy Padre")
-
-
-class Hijo(Madre, Padre):
-    def __init__(self):
-        Madre.__init__(self)
-        Padre.__init__(self)
-        print(f"Soy Hijo")
-
-
-hijo = Hijo()
+        super().__init__()
+        self.setWindowTitle("Hola mundo")
+        button = QPushButton("Hola")
+        self.setCentralWidget(button)
+ # Tamaño mínimo del widget
+        #self.setMinimumSize(QSize(480, 320))
+ # Tamaño máximo del widget
+ # Tamaño fijo del widget
+        self.setFixedSize(QSize(480, 320))
+if __name__ == "__main__":
+ app = QApplication(sys.argv)
+ window = MainWindow()
+ window.show()
+ sys.exit(app.exec_())

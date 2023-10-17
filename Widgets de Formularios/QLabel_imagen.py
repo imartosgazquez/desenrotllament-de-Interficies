@@ -10,7 +10,8 @@ def absPath(file):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setMinimumSize(QSize(480, 320))
+        self.setMinimumSize(QSize(280, 120))
+        self.setMaximumSize(QSize(280, 120))
         # creamos la imagen
         imagen = QPixmap(absPath("prueba.jpg"))
 
@@ -25,6 +26,8 @@ class MainWindow(QMainWindow):
 
         # establecemos unas flags de alineamiento
         etiqueta.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
+        # hacemos que se escale con la ventana 
+        etiqueta.setScaledContents(True) 
       
 
 if __name__ == "__main__":

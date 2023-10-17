@@ -21,6 +21,7 @@ class MainWindow(QMainWindow):
         self.button = button
 
     def boton_alternador(self, valor):
+        print(valor)
         if valor:
             self.button.setText("Estoy activado")
         else:

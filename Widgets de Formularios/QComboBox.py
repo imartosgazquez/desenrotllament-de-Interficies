@@ -16,13 +16,14 @@ class MainWindow(QMainWindow):
         desplegable.currentIndexChanged.connect(self.indice_cambiado)
         desplegable.currentTextChanged.connect(self.texto_cambiado)
 
+
     def indice_cambiado(self, valor):
         print("Nuevo índice ->", valor)
 
     def texto_cambiado(self, texto):
         print("Nuevo texto ->", texto)
 
-  
+
 
 if __name__ == "__main__":
     app = QApplication([])
