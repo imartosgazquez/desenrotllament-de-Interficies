@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QHBoxLayout, QWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
 import sys
 
 
@@ -12,7 +12,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        layout = QHBoxLayout()
+        layout = QVBoxLayout()
         layout.addWidget(Caja("green"))
         # le añadimos unas cuantas cajas
         layout.addWidget(Caja("green"))
