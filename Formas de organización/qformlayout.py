@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import (QApplication, QMainWindow, QLabel, QFormLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QMainWindow, QLabel, QFormLayout, QWidget, QLineEdit)
 from PySide6.QtCore import Qt  
 import sys
 
@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         formulario = QFormLayout()
 
         # añadimos widgets con etiquetas en filas
-        formulario.addRow("Naranja", Caja("orange"))
+        formulario.addRow(QLineEdit(), Caja("orange"))
         formulario.addRow("Campo 2", Caja("purple"))
         formulario.addRow("Magenta", Caja("magenta"))
         formulario.addRow("Gris", Caja("gray"))

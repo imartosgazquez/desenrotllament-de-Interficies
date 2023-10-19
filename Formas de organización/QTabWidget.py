@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import (QApplication, QMainWindow, QLabel, QTabWidget)
+from PySide6.QtWidgets import (QApplication, QMainWindow, QLabel, QTabWidget,QLineEdit)
 import sys
 
 
@@ -16,7 +16,7 @@ class MainWindow(QMainWindow):
         tabs = QTabWidget()
 
         # Añadimos varios widgets como pestañas con nombres
-        tabs.addTab(Caja("orange"), "Uno")
+        tabs.addTab(QLineEdit(), "Uno")
         tabs.addTab(Caja("magenta"), "Dos")
         tabs.addTab(Caja("purple"), "Tres")
         tabs.addTab(Caja("red"), "Cuatro")

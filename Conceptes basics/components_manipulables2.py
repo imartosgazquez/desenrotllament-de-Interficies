@@ -1,6 +1,5 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QLineEdit  # editado
 from PySide6.QtCore import QSize
-import sys
 
 
 class MainWindow(QMainWindow):
@@ -28,7 +27,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()
