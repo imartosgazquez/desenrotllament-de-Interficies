@@ -16,14 +16,14 @@ class MainWindow(QMainWindow):
     def boton_clicado(self):
         confirmado, fuente = QFontDialog.getFont(self)
         if confirmado:
-            # fuente es un objeto QFont
+            #fuente es un objeto QFont
             self.boton.setFont(fuente)
 
-    def boton_clicado(self):
-        color = QColorDialog.getColor()
-        if color.isValid():
-            # color es un objeto QColor, name() devuelve su código hexadecimal
-            self.boton.setStyleSheet(f"background-color: {color.name()}")
+   # def boton_clicado(self):
+      #  color = QColorDialog.getColor()
+       # if color.isValid():
+        #    # color es un objeto QColor, name() devuelve su código hexadecimal
+        #    self.boton.setStyleSheet(f"background-color: {color.name()}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

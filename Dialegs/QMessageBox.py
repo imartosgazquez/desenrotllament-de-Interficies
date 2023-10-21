@@ -1,6 +1,4 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QMessageBox)
-import sys
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -33,7 +31,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()

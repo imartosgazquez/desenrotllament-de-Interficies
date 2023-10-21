@@ -13,8 +13,11 @@ class MainWindow(QMainWindow):
 
     def boton_clicado(self):
         dialogo = QInputDialog.getText(self, "Título", "Texto")
-        dialogo = QInputDialog.getInt(self, "Título", "Entero")
-        dialogo = QInputDialog.getDouble(self, "Título", "Decimal")
+        print(dialogo)
+        #dialogo = QInputDialog.getInt(self, "Título", "Entero")
+        #print(dialogo)
+        #dialogo = QInputDialog.getDouble(self, "Título", "Decimal")
+        #print(dialogo)
         color, confirmado = QInputDialog.getItem(self, "Título",  "Colores", ["Rojo", "Azul", "Blanco", "Verde"])
         if confirmado:
             print(color)
