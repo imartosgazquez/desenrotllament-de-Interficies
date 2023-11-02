@@ -19,9 +19,11 @@ class VentanaPrincipal(QMainWindow):
         # Añadimos cuatro botones a a la primera fila
         layout_cuadrícula.addWidget(QPushButton('0,0'), 0, 0)
         layout_cuadrícula.addWidget(QPushButton('0,1'), 0, 1)
+        layout_cuadrícula.addWidget(QPushButton('0,2'), 0, 2)
+        layout_cuadrícula.addWidget(QPushButton('0,3'), 0, 3)
         
-        # Añadimos un botón a la seguna fila que ocupe dos columnas
-        layout_cuadrícula.addWidget(QPushButton('1,0-1'), 1, 0, 1, 2)
+        # Añadimos un botón a la seguna fila que ocupe dos columnas, empieza por 1
+        layout_cuadrícula.addWidget(QPushButton('1,0-1-2'), 1, 0, 1, 4)
        
 
 

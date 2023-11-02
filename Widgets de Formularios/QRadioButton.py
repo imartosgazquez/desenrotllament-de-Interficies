@@ -24,7 +24,7 @@ class MainWindow(QMainWindow):
             print("Radial desmarcado") 
 
 if __name__ == "__main__":
-    app = QApplication([])
+    app = QApplication()
     ventana = MainWindow()
     ventana.show()
     app.exec()

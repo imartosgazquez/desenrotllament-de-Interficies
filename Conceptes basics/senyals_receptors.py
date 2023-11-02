@@ -32,8 +32,8 @@ class MainWindow(QMainWindow):
     def boton_clicado(self):
         print("¡Me has clicado!")
 
-    def boton_alternador(self, valor):
-        print("¿Alternado?", valor)
+    def boton_alternador(self, pepito):
+        print("¿Alternado?", pepito)
 
 
 if __name__ == "__main__":

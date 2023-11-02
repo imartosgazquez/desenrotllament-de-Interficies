@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
         casilla.stateChanged.connect(self.estado_cambiado)
 
         # la podemos desactivar
-        #casilla.setEnabled(False)
+        casilla.setEnabled(False)
 
         # establecemos el triestado por defecto, también funcionan los otros dos
         casilla.setCheckState(Qt.PartiallyChecked)

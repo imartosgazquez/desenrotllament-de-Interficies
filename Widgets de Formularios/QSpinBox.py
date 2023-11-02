@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QSpinBox
+from PySide6.QtWidgets import QApplication, QMainWindow, QDoubleSpinBox
 
 
 class MainWindow(QMainWindow):
@@ -6,17 +6,17 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         # creamos un campo numérico entero
-        numero = QSpinBox()
+        numero = QDoubleSpinBox()
         self.setCentralWidget(numero)
 
         # Probamos algunas opciones
         #numero.setMinimum(0)
         #numero.setMaximum(10)
         numero.setRange(0, 10)
-        numero.setSingleStep(1)
+        numero.setSingleStep(0.5)
 
-        numero.setPrefix("$")
-        numero.setSuffix("%")
+       # numero.setPrefix("$")
+        numero.setSuffix("€")
 
         # Probamos algunas señales
         numero.valueChanged.connect(self.valor_cambiado)
