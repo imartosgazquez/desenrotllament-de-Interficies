@@ -1,6 +1,4 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QLabel, QTabWidget,QLineEdit)
-import sys
-
 
 class Caja(QLabel):
     def __init__(self, color):
@@ -21,7 +19,7 @@ class MainWindow(QMainWindow):
         tabs.addTab(Caja("purple"), "Tres")
         tabs.addTab(Caja("red"), "Cuatro")
 
-        tabs.setTabPosition(QTabWidget.West)  # West, East, North, South
+        tabs.setTabPosition(QTabWidget.North)  # West, East, North, South
 
         # asignamos las pestañas como widget central
         self.setCentralWidget(tabs)
@@ -29,7 +27,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()

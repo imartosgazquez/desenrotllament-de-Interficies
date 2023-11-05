@@ -24,8 +24,6 @@ class MainWindow(QMainWindow):
         layout3.addWidget(Caja("purple"))
         layout1.addLayout(layout3)
 
-
-
         # modificamos los márgenes
         layout1.setContentsMargins(0,0,0,0)
         # modificamos el espaciado
