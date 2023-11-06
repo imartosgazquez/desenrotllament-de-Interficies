@@ -5,12 +5,9 @@ from PySide6.QtWidgets import (
     QLCDNumber, QProgressBar, QDial, QSlider)
 from PySide6.QtCore import Qt
 from pathlib import Path
-import sys
-
 
 def absPath(file):
     return str(Path(__file__).parent.absolute() / file)
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -53,7 +50,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
     window = MainWindow()
     window.show()
     app.exec()

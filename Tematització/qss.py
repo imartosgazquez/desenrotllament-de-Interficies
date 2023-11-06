@@ -1,8 +1,7 @@
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QFormLayout, QWidget, QLabel, QRadioButton,
-    QCheckBox, QLineEdit, QSpinBox, QPushButton, QPlainTextEdit)
+    QCheckBox, QLineEdit, QSpinBox, QPushButton)
 from pathlib import Path
-import sys
 
 
 def absPath(file):
@@ -48,7 +47,7 @@ class MainWindow(QMainWindow):
         """)
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()

@@ -1,9 +1,7 @@
 from PySide6.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QPushButton, QStyle)  # edited
-from PySide6.QtCore import Qt
+    QApplication, QMainWindow, QPushButton, QStyle)  # edited
 from PySide6.QtGui import QPalette, QColor  # nuevo
-import sys
-import sys
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -17,7 +15,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(boton)
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
 
     # creamos nuestra paleta de colores
     paleta = QPalette()
@@ -29,4 +27,4 @@ if __name__ == "__main__":
 
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()
