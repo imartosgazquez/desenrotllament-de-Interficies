@@ -1,6 +1,5 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QInputDialog)  # editado
 from PySide6.QtCore import QTranslator, QLibraryInfo  # nuevo
-import sys
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -14,17 +13,17 @@ class MainWindow(QMainWindow):
     def boton_clicado(self):
         dialogo = QInputDialog.getText(self, "Título", "Texto")
         print(dialogo)
-        #dialogo = QInputDialog.getInt(self, "Título", "Entero")
-        #print(dialogo)
-        #dialogo = QInputDialog.getDouble(self, "Título", "Decimal")
-        #print(dialogo)
+        dialogo = QInputDialog.getInt(self, "Título", "Entero")
+        print(dialogo)
+        dialogo = QInputDialog.getDouble(self, "Título", "Decimal")
+        print(dialogo)
         color, confirmado = QInputDialog.getItem(self, "Título",  "Colores", ["Rojo", "Azul", "Blanco", "Verde"])
         if confirmado:
             print(color)
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
 
     # envolvemos la aplicación con el traductor
     translator = QTranslator(app)
@@ -37,4 +36,4 @@ if __name__ == "__main__":
 
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()

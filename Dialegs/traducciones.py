@@ -1,7 +1,5 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QMessageBox)
 from PySide6.QtCore import QTranslator, QLibraryInfo  # nuevo
-import sys
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -20,15 +18,18 @@ class MainWindow(QMainWindow):
 
         if dialogo == QMessageBox.Apply:
             print("Aplicamos los cambios")
+        else:
+            print("Cancelamos los cambios")
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
 
     # envolvemos la aplicación con el traductor
     translator = QTranslator(app)
     # recuperamos el directorio de traducciones
     translations = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
+    print(translations)
     # cargamos la traducción en el traductor
     translator.load("qt_es", translations)
     # la aplicamos
@@ -36,4 +37,4 @@ if __name__ == "__main__":
 
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()
