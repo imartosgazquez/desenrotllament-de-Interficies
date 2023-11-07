@@ -2,7 +2,6 @@ from PySide6.QtWidgets import (
     QApplication, QMainWindow, QMessageBox, QStatusBar)
 from PySide6.QtGui import QAction, QIcon
 from pathlib import Path
-import sys
 
 def absPath(file):
     return str(Path(__file__).parent.absolute() / file)
@@ -58,7 +57,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()
