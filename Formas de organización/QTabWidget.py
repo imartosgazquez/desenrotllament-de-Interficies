@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
         tabs.addTab(Caja("purple"), "Tres")
         tabs.addTab(Caja("red"), "Cuatro")
 
-        tabs.setTabPosition(QTabWidget.North)  # West, East, North, South
+        tabs.setTabPosition(QTabWidget.West)  # West, East, North, South
 
         # asignamos las pestañas como widget central
         self.setCentralWidget(tabs)

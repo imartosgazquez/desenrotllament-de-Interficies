@@ -25,9 +25,9 @@ class MainWindow(QMainWindow):
         layout1.addLayout(layout3)
 
         # modificamos los márgenes
-        layout1.setContentsMargins(0,0,0,0)
+        #layout1.setContentsMargins(0,0,0,0)
         # modificamos el espaciado
-        layout1.setSpacing(0)
+        #layout1.setSpacing(0)
 
         # creamos un dummy widget para hacer de contenedor
         widget = QWidget()

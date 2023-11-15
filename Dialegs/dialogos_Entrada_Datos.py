@@ -18,8 +18,8 @@ class MainWindow(QMainWindow):
         dialogo = QInputDialog.getDouble(self, "Título", "Decimal")
         print(dialogo)
         color, confirmado = QInputDialog.getItem(self, "Título",  "Colores", ["Rojo", "Azul", "Blanco", "Verde"])
-        if confirmado:
-            print(color)
+        #if confirmado:
+        print(color)
 
 
 if __name__ == "__main__":

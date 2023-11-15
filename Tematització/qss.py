@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
         formulario.addRow("QPushButton", QPushButton("QPushButton"))
         formulario.addRow("QLineEdit", QLineEdit("QLineEdit"))
         formulario.addRow("QSpinBox", QSpinBox())
-        etiqueta = QLabel("Esto es la etiqueta")
+        etiqueta = QLabel("Etiqueta con Objetc Name")
         #Damos un nombre identificativo a la instancia etiqueta
         etiqueta.setObjectName("etiqueta")
         formulario.addRow(etiqueta)
