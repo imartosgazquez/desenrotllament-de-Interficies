@@ -9,7 +9,7 @@ class FinestraPrincipal(QMainWindow):
         self.setWindowTitle("Conexió amb SQLite")
        
         conexion=QSqlDatabase.addDatabase("QSQLITE")
-        conexion.setDatabaseName("contactos.db")
+        conexion.setDatabaseName("SQLite/contactos.db")
 
         if not conexion.open():
             print("No se puede conectar a la BDA")

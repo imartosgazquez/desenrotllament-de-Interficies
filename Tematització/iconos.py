@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         # recuperamos el icono de la libería estandard de la ventana
-        icono = self.style().standardIcon(QStyle.SP_DialogSaveButton)
+        icono = self.style().standardIcon(QStyle.SP_ArrowForward)
         # lo podemos asignar a un botón
         boton = QPushButton(icono, "Botón guardar")
 

@@ -2,7 +2,7 @@ from PySide6.QtSql import QSqlDatabase, QSqlQuery
 import sys
 
 conexion=QSqlDatabase.addDatabase("QSQLITE")
-conexion.setDatabaseName("contactos.db")
+conexion.setDatabaseName("SQLite/contactos.db")
 
 print(conexion.databaseName(),conexion.connectionName())
 
@@ -12,7 +12,7 @@ if not conexion.open():
     sys.exit(True)
 
 consulta=QSqlQuery()
-consulta.exec("DROP TABLE IF EXISTS contactos")
+#consulta.exec("DROP TABLE IF EXISTS contactos")
 consulta.exec("""
     CREATE TABLE IF NOT EXISTS contactos
     (    
