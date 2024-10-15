@@ -1,12 +1,13 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel
 from PySide6.QtCore import QSize, Qt
 from PySide6.QtGui import QPixmap
-from pathlib import Path
+from pathlib import Path  #es una clase dentro de pathlib que representa rutas de sistema de archivos.
 
 def absPath(file):
     # Devuelve la ruta absoluta a un fichero desde el propio script
     return str(Path(__file__).parent.absolute() / file)
-
+    # Path(__file__) Crea un objeto Path que representa la ruta relativa del script actual.
+ 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -14,6 +15,7 @@ class MainWindow(QMainWindow):
         self.setMaximumSize(QSize(280, 120))
         # creamos la imagen
         imagen = QPixmap(absPath("prueba.jpg"))
+        print(absPath("naturaleza.jpg"))
 
         # widget etiqueta
         etiqueta = QLabel(self)

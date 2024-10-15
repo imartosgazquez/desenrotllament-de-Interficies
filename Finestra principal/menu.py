@@ -17,6 +17,7 @@ class MainWindow(QMainWindow):
     def construir_menu(self):
         # Recuperamos la barra de menú
         menu = self.menuBar()
+        menu.setNativeMenuBar(False)
 
         # Añadimos un menú de archivo
         menu_archivo = menu.addMenu("&Menú")

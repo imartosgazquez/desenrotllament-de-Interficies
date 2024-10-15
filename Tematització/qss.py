@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         formulario.addRow("QSpinBox", QSpinBox())
         etiqueta = QLabel("Etiqueta con Objetc Name")
         #Damos un nombre identificativo a la instancia etiqueta
-        #etiqueta.setObjectName("etiqueta")
+        etiqueta.setObjectName("etiqueta")
         formulario.addRow(etiqueta)
 
         widget = QWidget()

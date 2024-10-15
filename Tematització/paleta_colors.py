@@ -24,9 +24,9 @@ if __name__ == "__main__":
 
     # creamos nuestra paleta de colores
     paleta = QPalette()
-    paleta.setColor(QPalette.Window, QColor(51, 51, 51))
+    paleta.setColor(QPalette.Window, QColor("#ffffff"))
     paleta.setColor(QPalette.WindowText, QColor(235, 235, 235))
-    paleta.setColor(QPalette.Highlight, QColor(255, 0, 0))
+    paleta.setColor(QPalette.Highlight, QColor(235, 235, 235))
 
     # activamos la paleta en la aplicación
     app.setPalette(paleta)

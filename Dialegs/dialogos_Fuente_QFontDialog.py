@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QFontDialog)  # new
+from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QFontDialog,)  # new
 from PySide6.QtCore import QTranslator, QLibraryInfo  # nuevo
 
 class MainWindow(QMainWindow):

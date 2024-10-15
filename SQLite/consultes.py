@@ -12,7 +12,7 @@ if not conexion.open():
     sys.exit(True)
 
 consulta=QSqlQuery()
-#consulta.exec("DROP TABLE IF EXISTS contactos")
+consulta.exec("DROP TABLE IF EXISTS contactos")
 consulta.exec("""
     CREATE TABLE IF NOT EXISTS contactos
     (    

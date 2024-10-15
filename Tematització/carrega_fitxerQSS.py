@@ -35,7 +35,7 @@ class MainWindow(QMainWindow):
         widget.setLayout(formulario)
 
         self.setCentralWidget(widget)
-        self.cargarQSS("qss/ElegantDark.qss")
+        self.cargarQSS("qss/TCobra.qss")
 
     def cargarQSS(self, file):
         # guardamos la ruta absoluta al fichero
