@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
         for fila in range(5):
             for columna in range(5):
                 # añadimos una caja de color aleatorio
-                color = str(hex(random.randint(0, 16777215)))  # int(0xFFFFFF)
+                color = str(hex(random.randint(0, 16777215)))  # int(0xFFFFFF) (24 bits)
                 cuadricula.addWidget(Caja(f"#{color[2:]}"), fila, columna)
 
 

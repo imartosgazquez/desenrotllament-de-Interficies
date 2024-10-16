@@ -3,7 +3,7 @@ from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
 class Contenedor(QLabel):
     def __init__(self, color):
         super().__init__()
-        self.setStyleSheet("background-color:{color}")
+        self.setStyleSheet(f"background-color:{color}")
 
 class MainWindow(QMainWindow):
     def __init__(self):
