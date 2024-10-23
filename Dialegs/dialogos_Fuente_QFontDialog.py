@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QFontDialog,)  # new
-from PySide6.QtCore import QTranslator, QLibraryInfo  # nuevo
+from PySide6.QtCore import QTranslator, QLibraryInfo, QLocale  # QLocale para obtener el idioma del sistema
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -24,7 +24,8 @@ if __name__ == "__main__":
     # envolvemos la aplicación con el traductor
     translator = QTranslator(app)
     # recuperamos el directorio de traducciones
-    translations = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
+    translations = QLibraryInfo.path(QLibraryInfo.LibraryPath.TranslationsPath)
+    print(translations)
     # cargamos la traducción en el traductor
     translator.load("qt_es", translations)
     # la aplicamos
@@ -32,4 +33,4 @@ if __name__ == "__main__":
 
     window = MainWindow()
     window.show()
-    app.exec_()
+    app.exec()

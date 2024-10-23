@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
         self.setMinimumSize(QSize(280, 120))
         self.setMaximumSize(QSize(280, 120))
         # creamos la imagen
-        imagen = QPixmap(absPath("prueba.jpg"))
+        imagen = QPixmap(absPath("naturaleza.jpg"))
         print(absPath("naturaleza.jpg"))
 
         # widget etiqueta

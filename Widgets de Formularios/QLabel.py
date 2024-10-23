@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
         etiqueta.setFont(fuente)
 
         # establecemos unas flags de alineamiento
-        etiqueta.setAlignment(Qt.AlignH | Qt.AlignVCenter)
+        etiqueta.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
   
 
 if __name__ == "__main__":

@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
         dialogo.setIcon(QMessageBox.Information)
 
         # ejecutamos el diálogo y capturamos la respuesta
-        respuesta = dialogo.exec_()
+        respuesta = dialogo.exec()
         # ahora debemos comprobar qué tipo de botón se ha clicado
         if respuesta == QMessageBox.Ok:
             print("Diálogo aceptado")
