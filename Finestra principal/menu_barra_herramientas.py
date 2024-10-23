@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
         menu_archivo.addSeparator()
         # Añadimos una acción completa
         menu_archivo.addAction(
-            QIcon(absPath("exit.png")), "S&alir", self.close, "Ctrl+Q")
+            QIcon(absPath("exit.png")), "S&alir", self.close)
 
         # Añadimos un menú de ayuda
         menu_ayuda = menu.addMenu("Ay&uda")
@@ -59,7 +59,7 @@ class MainWindow(QMainWindow):
 
     def construir_herramientas(self):
         # Creamos una barra de herramientas
-        herramientas = QToolBar("Barra de herramientas principal")
+        herramientas = QToolBar(self)
         # Podemos agregar la acción salir implícitamente
         herramientas.addAction(QIcon(absPath("exit.png")), "S&alir", self.close)
         # O añadir una acción ya creada para reutilizar código
@@ -74,4 +74,4 @@ if __name__ == "__main__":
     app = QApplication()
     window = MainWindow()
     window.show()
-    app.exec_()
+    app.exec()

@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QMessageBox, QStatusBar)
-from PySide6.QtGui import QAction, QIcon
+from PySide6.QtGui import QAction, QIcon, QKeySequence
 from pathlib import Path
 
 def absPath(file):
@@ -13,6 +13,12 @@ class MainWindow(QMainWindow):
 
         # construimos nuestro menú
         self.construir_menu()
+
+         # Añadimos un atajo global para cerrar la ventana
+        accion_salir = QAction(self)
+        accion_salir.setShortcut(QKeySequence("Ctrl+Q"))
+        accion_salir.triggered.connect(self.close)
+        self.addAction(accion_salir)
 
     def construir_menu(self):
         # Recuperamos la barra de menú
@@ -32,8 +38,7 @@ class MainWindow(QMainWindow):
         menu_archivo.addSeparator()
         # Añadimos una acción completa
         menu_archivo.addAction(
-            QIcon(absPath("exit.png")), "S&alir", self.close, "Ctrl+Q")
-
+            QIcon(absPath("exit.png")), "S&alir", self.close)
         # Añadimos un menú de ayuda
         menu_ayuda = menu.addMenu("Ay&uda")
         # Creamos una acción específica para mostrar información

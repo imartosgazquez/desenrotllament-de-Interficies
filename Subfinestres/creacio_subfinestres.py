@@ -21,8 +21,8 @@ class MainWindow(QMainWindow):
         # Le damos un tamaño y un título
         self.setWindowTitle("Ventana principal")
         # dummy widget para un layout
-        layout = QVBoxLayout()
-        widget = QWidget()
+        layout = QVBoxLayout(self)
+        widget = QWidget(self)
         widget.setLayout(layout)
         self.setCentralWidget(widget)
         # botón para abrir la subventana
@@ -33,7 +33,6 @@ class MainWindow(QMainWindow):
     def mostrar_subventana(self):
         self.subventana = Subventana()
         self.subventana.show()
-
 
 if __name__ == "__main__":
     app = QApplication()
