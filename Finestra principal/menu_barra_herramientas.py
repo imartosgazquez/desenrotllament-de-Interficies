@@ -53,10 +53,6 @@ class MainWindow(QMainWindow):
         # accesores de clase
         self.accion_info = accion_info
 
-    def mostrar_info(self):
-        dialogo = QMessageBox.information(
-            self, "Diálogo informativo", "Esto es un texto informativo")
-
     def construir_herramientas(self):
         # Creamos una barra de herramientas
         herramientas = QToolBar(self)

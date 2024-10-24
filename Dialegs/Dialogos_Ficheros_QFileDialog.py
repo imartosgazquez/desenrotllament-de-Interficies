@@ -11,8 +11,8 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(boton)
 
     def boton_clicado(self):
-        fichero, _ = QFileDialog.getOpenFileName(self, "Abrir archivo", ".")
-        #fichero, _ = QFileDialog.getSaveFileName(self, "Guardar archivo", ".")
+        #fichero, _ = QFileDialog.getOpenFileName(self, "Abrir archivo", ".")
+        fichero, _ = QFileDialog.getSaveFileName(self, "Guardar archivo", ".")
         print(fichero)
 
 if __name__ == "__main__":

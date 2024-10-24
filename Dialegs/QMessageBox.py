@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
         dialogo.button(QMessageBox.Ok).setText("Aceptar")
         dialogo.button(QMessageBox.Cancel).setText("Cancelar")
         # configuramos un icono
-        dialogo.setIcon(QMessageBox.Information)
+        dialogo.setIcon(QMessageBox.Critical)
 
         # ejecutamos el diálogo y capturamos la respuesta
         respuesta = dialogo.exec()
@@ -34,4 +34,4 @@ if __name__ == "__main__":
     app = QApplication()
     window = MainWindow()
     window.show()
-    app.exec_()
+    app.exec()

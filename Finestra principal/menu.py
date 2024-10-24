@@ -14,12 +14,6 @@ class MainWindow(QMainWindow):
         # construimos nuestro menú
         self.construir_menu()
 
-         # Añadimos un atajo global para cerrar la ventana
-        accion_salir = QAction(self)
-        accion_salir.setShortcut(QKeySequence("Ctrl+Q"))
-        accion_salir.triggered.connect(self.close)
-        self.addAction(accion_salir)
-
     def construir_menu(self):
         # Recuperamos la barra de menú
         menu = self.menuBar()
@@ -66,4 +60,4 @@ if __name__ == "__main__":
     app = QApplication()
     window = MainWindow()
     window.show()
-    app.exec_()
+    app.exec()
