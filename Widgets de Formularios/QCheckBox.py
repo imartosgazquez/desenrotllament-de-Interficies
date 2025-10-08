@@ -1,7 +1,4 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QCheckBox  # edited
-from PySide6.QtCore import QSize, Qt
-import sys
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
