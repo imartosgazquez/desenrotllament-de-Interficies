@@ -32,4 +32,4 @@ if __name__ == "__main__":
     # Mostramos la ventana
     window.show()
     # Iniciamos el bucle del programa
-    app.exec_()
+    app.exec()
