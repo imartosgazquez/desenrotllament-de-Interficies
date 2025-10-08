@@ -10,4 +10,4 @@ button = QPushButton("Soy un botón")
 window.setCentralWidget(button)
 
 window.show()
-app.exec_()
+app.exec()
