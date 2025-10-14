@@ -1,63 +1,58 @@
-from PySide6.QtWidgets import (QApplication, QMainWindow, QLabel, QStackedLayout, QWidget)
-from PySide6.QtCore import Qt 
-import sys
-
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QStackedLayout, QWidget
+from PySide6.QtCore import Qt
 
 class Caja(QLabel):
     def __init__(self, color):
-        super().__init__()
-        self.setStyleSheet(f"background-color:{color}")
-
+        super().__init__(color)              # muestro el nombre del color
+        self.setAlignment(Qt.AlignCenter)
+        self.setMinimumSize(300, 200)        # tamaño razonable
+        self.setStyleSheet(f"background-color:{color}; color:white; font-size:24px;")
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        # creamos un layout apilado
-        layout = QStackedLayout()
+        pila = QStackedLayout()
+        pila.addWidget(Caja("orange"))
+        pila.addWidget(Caja("magenta"))
+        pila.addWidget(Caja("purple"))
+        pila.addWidget(Caja("red"))
 
-        # Añadimos varios widgets unos sobre otros
-        layout.addWidget(Caja("orange"))
-        layout.addWidget(Caja("magenta"))
-        layout.addWidget(Caja("purple"))
-        layout.addWidget(Caja("red"))
+        contenedor = QWidget()
+        contenedor.setLayout(pila)
+        self.setCentralWidget(contenedor)
 
-        # creamos el widget dummy y le asignamos el layout apilado
-        widget = QWidget()
-        widget.setLayout(layout)
+        # guardar la referencia para usarla en keyPressEvent
+        self.pila = pila
 
-        self.setCentralWidget(widget)
-
-        # necesitamos crear un accesor para usar el layout desde el evento
-        self.layout = layout
+        # asegurar que recibimos eventos de teclado
+        self.setFocusPolicy(Qt.StrongFocus)
+        self.setFocus()
 
     def keyPressEvent(self, event):
-        # recuperamos el índice
-        indice = self.layout.currentIndex()
-        # buscamos el indice máximo del layout contando cuantos widgets tiene
-        indice_maximo = self.layout.count() - 1
+        idx = self.pila.currentIndex()
+        max_idx = self.pila.count() - 1
 
-        # dependiendo de la flecha presionada sumamos o restamos
         if event.key() == Qt.Key_Right:
-            indice += 1
+            idx += 1
         elif event.key() == Qt.Key_Left:
-            indice -= 1
+            idx -= 1
+        else:
+            # dejar que otras teclas se manejen como siempre
+            return super().keyPressEvent(event)
 
-        # rectificamos el índice para generar el efecto infinito
-        if indice > indice_maximo:
-            indice = 0
-        if indice < 0:
-            indice = indice_maximo
+        # efecto “infinito”
+        if idx > max_idx:
+            idx = 0
+        elif idx < 0:
+            idx = max_idx
 
-        # finalmente establecemos el nuevo índice
-        self.layout.setCurrentIndex(indice)
-
-        # continuamos con el evento por defecto
-        event.accept()
-
+        self.pila.setCurrentIndex(idx)
+        # y ahora sí, pasamos al comportamiento por defecto
+        super().keyPressEvent(event)
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
+    app = QApplication()
+    w = MainWindow()
+    w.show()
+    app.exec()

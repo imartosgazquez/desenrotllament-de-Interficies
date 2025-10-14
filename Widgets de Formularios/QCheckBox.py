@@ -1,4 +1,5 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QCheckBox  # edited
+from PySide6.QtWidgets import QApplication, QMainWindow, QCheckBox
+from PySide6.QtCore import Qt  # edited
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -15,7 +16,7 @@ class MainWindow(QMainWindow):
         #casilla.setEnabled(False)
 
         # establecemos el triestado por defecto, también funcionan los otros dos
-        #casilla.setCheckState(Qt.PartiallyChecked)
+        casilla.setCheckState(Qt.PartiallyChecked)
 
     def estado_cambiado(self, estado):
         if (estado==2):

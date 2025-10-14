@@ -22,7 +22,7 @@ class VentanaPrincipal(QMainWindow):
         layout_cuadrícula.addWidget(QPushButton('0,2'), 0, 2)
         layout_cuadrícula.addWidget(QPushButton('0,3'), 0, 3)
         
-        # Añadimos un botón a la seguna fila que ocupe cuatro columnas, empieza por 1
+        # layout_cuadrícula.addWidget(widget, filainicial, columnainicial, filasocupadas, columnasocupadas)
         layout_cuadrícula.addWidget(QPushButton('1,0-1-2'), 1, 0, 1, 4)
        
 

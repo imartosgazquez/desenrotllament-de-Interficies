@@ -1,6 +1,4 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
-import sys
-
 
 class Caja(QLabel):
     def __init__(self, color):
@@ -34,7 +32,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(widget)
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
     window = MainWindow()
     window.show()
     app.exec()

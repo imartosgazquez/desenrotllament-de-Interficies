@@ -9,7 +9,11 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(button)
 
         # Redimensión simple
-        self.resize(480, 320)
+        #self.resize(480, 320)
+        # Tamaño mínimo de la ventana
+        self.setMinimumSize(QSize(480, 320))
+ # Tamaño máximo de la ventana
+        self.setMaximumSize(QSize(880, 320))
 
 
 if __name__ == "__main__":

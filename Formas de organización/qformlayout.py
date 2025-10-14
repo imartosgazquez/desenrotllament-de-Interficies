@@ -1,7 +1,5 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QLabel, QFormLayout, QWidget, QLineEdit)
 from PySide6.QtCore import Qt  
-import sys
-
 
 class Caja(QLabel):
     def __init__(self, color):
@@ -35,7 +33,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = QApplication()
     window = MainWindow()
     window.show()
     app.exec()
