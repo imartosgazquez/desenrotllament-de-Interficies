@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QHBoxLayout, QWidget
 
 class Caja(QLabel):
     def __init__(self, color):
@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        layout = QVBoxLayout()
+        layout = QHBoxLayout()
         layout.addWidget(Caja("green"))
         # le añadimos unas cuantas cajas
         layout.addWidget(Caja("green"))
@@ -18,9 +18,9 @@ class MainWindow(QMainWindow):
         layout.addWidget(Caja("red"))
 
         # modificamos los márgenes
-        layout.setContentsMargins(0,0,0,0)
+        layout.setContentsMargins(15,5,15,5)
         # modificamos el espaciado
-        layout.setSpacing(0)
+        layout.setSpacing(10)
 
         # creamos un dummy widget para hacer de contenedor
         widget = QWidget()

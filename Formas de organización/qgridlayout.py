@@ -19,6 +19,7 @@ class MainWindow(QMainWindow):
         cuadricula.addWidget(Caja("magenta"), 2, 2)
         cuadricula.addWidget(Caja("gray"), 2, 0)
         cuadricula.addWidget(Caja("red"), 0, 2)
+        
 
 
         # cremos el widget dummy y le asignamos el layout horizontal
