@@ -31,11 +31,11 @@ class MainWindow(QMainWindow):
         boton2.clicked.connect(lambda: self.stack.setCurrentIndex(1))
         boton3.clicked.connect(lambda: self.stack.setCurrentIndex(2))
         #El código anterior con lambdas equivale a
+        # boton1.clicked.connect(cambiar_pantalla)
+
         #def cambiar_pantalla():
            # self.stack.setCurrentIndex(0)
-           # boton1.clicked.connect(cambiar_pantalla)
-
-
+           
         # Layout principal
         layout = QVBoxLayout()
         layout.addWidget(self.stack)
