@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QMessageBox)
-from PySide6.QtCore import QTranslator, QLibraryInfo, QLocale  # QLocale para obtener el idioma del sistema
+from PySide6.QtCore import QTranslator, QLibraryInfo
 
 class MainWindow(QMainWindow):
     def __init__(self):

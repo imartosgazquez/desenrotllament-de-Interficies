@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QFileDialog)  # editado
-from PySide6.QtCore import QTranslator, QLibraryInfo, QLocale  # QLocale para obtener el idioma del sistema
+from PySide6.QtCore import QTranslator, QLibraryInfo
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -11,8 +11,8 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(boton)
 
     def boton_clicado(self):
-        #fichero, _ = QFileDialog.getOpenFileName(self, "Abrir archivo", ".")
-        fichero, _ = QFileDialog.getSaveFileName(self, "Guardar archivo", ".")
+        fichero, _ = QFileDialog.getOpenFileName(self, "Abrir archivo", ".")
+        #fichero, _ = QFileDialog.getSaveFileName(self, "Guardar archivo", ".")
         print(fichero)
 
 if __name__ == "__main__":

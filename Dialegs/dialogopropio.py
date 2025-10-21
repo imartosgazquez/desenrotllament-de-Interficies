@@ -1,7 +1,6 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QDialog,
                                QLineEdit, QSpinBox, QFormLayout,
                                QDialogButtonBox, QMessageBox, QPushButton)
-import sys
 
 class UsuariDialog(QDialog):
     def __init__(self, parent=None):
@@ -41,15 +40,15 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(boto)
 
     def crea_usuari(self):
-        dlg = UsuariDialog(self)
+        dlg = UsuariDialog(self) # Crear diàleg de nou usuari i passar-li la finestra principal com a pare
         if dlg.exec():  # Si l’usuari accepta
             QMessageBox.information(self, "Acceptat",
                 f"Usuari: {dlg.nom.text()} ({dlg.edat.value()} anys)")
         else:
             QMessageBox.information(self, "Cancel·lat", "Operació cancel·lada")
 
-app = QApplication(sys.argv)
+app = QApplication()
 finestra = MainWindow()
 finestra.resize(320, 160)
 finestra.show()
-sys.exit(app.exec())
+app.exec()
