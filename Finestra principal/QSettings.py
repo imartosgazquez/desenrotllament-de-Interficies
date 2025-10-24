@@ -70,11 +70,12 @@ class MainWindow(QMainWindow):
         self.lbl = QLabel(alignment=Qt.AlignCenter)
         self.btn = QPushButton("Preferències…")
         self.btn.clicked.connect(self._obrir_preferencies)
-
+        
         root = QWidget()
         col = QVBoxLayout(root)
         col.addWidget(self.lbl)
         col.addWidget(self.btn, alignment=Qt.AlignCenter)
+        
         self.setCentralWidget(root)
 
         # Aplica estat inicial

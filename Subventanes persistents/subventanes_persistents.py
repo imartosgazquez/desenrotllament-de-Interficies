@@ -1,8 +1,5 @@
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QVBoxLayout, QWidget, QPushButton, QLineEdit)
-import random  # new
-
-
 
 class Subventana(QWidget):
     def __init__(self):

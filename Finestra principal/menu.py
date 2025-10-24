@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QMessageBox, QStatusBar)
-from PySide6.QtGui import QAction, QIcon, QKeySequence
+from PySide6.QtGui import QAction, QIcon
 from pathlib import Path
 
 def absPath(file):
@@ -17,11 +17,12 @@ class MainWindow(QMainWindow):
     def construir_menu(self):
         # Recuperamos la barra de menú
         menu = self.menuBar()
+        # Muestra el menú dentro de la ventana (no en la barra superior del sistema macOS)
         menu.setNativeMenuBar(False)
 
         # Añadimos un menú de archivo
         menu_archivo = menu.addMenu("&Menú")
-        # Añadimos una acción de prueba
+        # Añadimos una acción de prueba. Alt+p activará esta acción
         menu_archivo.addAction("&Prueba")
         # Añadimos un submenú
         submenu_archivo = menu_archivo.addMenu("&Submenú")
@@ -30,12 +31,13 @@ class MainWindow(QMainWindow):
         submenu_archivo.addAction("Subopción &2")
         # Añadimos un separador
         menu_archivo.addSeparator()
-        # Añadimos una acción completa
+        # Añadimos una acción completa. Alt+a activará esta acción
         menu_archivo.addAction(
             QIcon(absPath("exit.png")), "S&alir", self.close)
-        # Añadimos un menú de ayuda
+        
+        # Añadimos un menú de ayuda. Alt+u activará este menú
         menu_ayuda = menu.addMenu("Ay&uda")
-        # Creamos una acción específica para mostrar información
+        # Utilizamos una acción más completa ayudandonos de QAction
         accion_info = QAction("&Información", self)
         # Podemos configurar un icono en la acción
         accion_info.setIcon(QIcon(absPath("info.png")))
@@ -43,7 +45,7 @@ class MainWindow(QMainWindow):
         accion_info.setShortcut("Ctrl+I")
         # Le configuramos una señal para ejecutar un método
         accion_info.triggered.connect(self.mostrar_info)
-        # Añadimos un texto de ayuda
+        # Añadimos un texto de ayuda en la barrea de estado
         accion_info.setStatusTip("Muestra información irrelevante")
         # Añadimos la acción al menú
         menu_ayuda.addAction(accion_info)
