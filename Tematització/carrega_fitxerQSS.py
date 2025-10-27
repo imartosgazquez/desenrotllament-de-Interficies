@@ -42,8 +42,8 @@ class MainWindow(QMainWindow):
         path = absPath(file)
         # intentamos abrirlo y volcar el contenido
         try:
-            with open(path) as styles:
-                self.setStyleSheet(styles.read())
+            with open(path) as estilos:
+                self.setStyleSheet(estilos.read())
         # si hay algún fallo lo capturamos con una excepción genérica
         except:
             print("Error abriendo estilos", path)

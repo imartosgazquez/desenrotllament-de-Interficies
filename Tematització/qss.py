@@ -1,12 +1,6 @@
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QFormLayout, QWidget, QLabel, QRadioButton,
     QCheckBox, QLineEdit, QSpinBox, QPushButton)
-from pathlib import Path
-
-
-def absPath(file):
-    return str(Path(__file__).parent.absolute() / file)
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
