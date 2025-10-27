@@ -1,6 +1,5 @@
 from PySide6.QtWidgets import (QApplication, QMainWindow, QMdiArea, QMdiSubWindow,
                                QTextEdit, QToolBar, QPushButton)
-import sys
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -36,8 +35,8 @@ class MainWindow(QMainWindow):
         self.mdi.addSubWindow(sub)
         sub.show()
 
-app = QApplication(sys.argv)
+app = QApplication()
 finestra = MainWindow()
 finestra.resize(700, 450)
 finestra.show()
-sys.exit(app.exec())
+app.exec()
